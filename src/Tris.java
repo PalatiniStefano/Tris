@@ -9,7 +9,6 @@ public class Tris {
     private boolean turn;
     private Player currentPlayer;
 
-
     public Tris() {
         field = new Field();
         player1 = new Player("o");
@@ -18,67 +17,69 @@ public class Tris {
         turn = true;
     }
 
+    //Rules to win
     public boolean win(String symbol, Field field) {
         if (field.getField()[0] == symbol && field.getField()[1] == symbol && field.getField()[2] == symbol) {
             if (symbol == "o") {
-                System.out.println("Ha vinto il player 1");
+                System.out.println("Player 1 won");
             } else if (symbol == "x") {
-                System.out.println("Ha vinto il player 2");
+                System.out.println("Player 2 won");
             }
             return true;
         } else if (field.getField()[3] == symbol && field.getField()[4] == symbol && field.getField()[5] == symbol) {
             if (symbol == "o") {
-                System.out.println("Ha vinto il player 1");
+                System.out.println("Player 1 won");
             } else if (symbol == "x") {
-                System.out.println("Ha vinto il player 2");
+                System.out.println("Player 2 won");
             }
             return true;
         } else if (field.getField()[6] == symbol && field.getField()[7] == symbol && field.getField()[8] == symbol) {
             if (symbol == "o") {
-                System.out.println("Ha vinto il player 1");
+                System.out.println("Player 1 won");
             } else if (symbol == "x") {
-                System.out.println("Ha vinto il player 2");
+                System.out.println("Player 2 won");
             }
             return true;
         } else if (field.getField()[0] == symbol && field.getField()[3] == symbol && field.getField()[6] == symbol) {
             if (symbol == "o") {
-                System.out.println("Ha vinto il player 1");
+                System.out.println("Player 1 won");
             } else if (symbol == "x") {
-                System.out.println("Ha vinto il player 2");
+                System.out.println("Player 2 won");
             }
             return true;
         } else if (field.getField()[1] == symbol && field.getField()[4] == symbol && field.getField()[7] == symbol) {
             if (symbol == "o") {
-                System.out.println("Ha vinto il player 1");
+                System.out.println("Player 1 won");
             } else if (symbol == "x") {
-                System.out.println("Ha vinto il player 2");
+                System.out.println("Player 2 won");
             }
             return true;
         } else if (field.getField()[2] == symbol && field.getField()[5] == symbol && field.getField()[8] == symbol) {
             if (symbol == "o") {
-                System.out.println("Ha vinto il player 1");
+                System.out.println("Player 1 won");
             } else if (symbol == "x") {
-                System.out.println("Ha vinto il player 2");
+                System.out.println("Player 2 won");
             }
             return true;
         } else if (field.getField()[0] == symbol && field.getField()[4] == symbol && field.getField()[8] == symbol) {
             if (symbol == "o") {
-                System.out.println("Ha vinto il player 1");
+                System.out.println("Player 1 won");
             } else if (symbol == "x") {
-                System.out.println("Ha vinto il player 2");
+                System.out.println("Player 2 won");
             }
             return true;
         } else if (field.getField()[2] == symbol && field.getField()[4] == symbol && field.getField()[6] == symbol) {
             if (symbol == "o") {
-                System.out.println("Ha vinto il player 1");
+                System.out.println("Player 1 won");
             } else if (symbol == "x") {
-                System.out.println("Ha vinto il player 2");
+                System.out.println("Player 2 won");
             }
             return true;
         }
         return false;
     }
 
+    //Check method to see if the grid is full
     public boolean isFull() {
         int f = 0;
         for (int i = 0; i < 9; i++) {
@@ -92,6 +93,7 @@ public class Tris {
         return false;
     }
 
+    //Method for switch from one player to another
     public void isPlayerTurn(int choice) {
         if(choice == 1) {
             if (turn) {

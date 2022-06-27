@@ -1,7 +1,9 @@
 import java.util.Arrays;
 
+//Class for creating the view
+
 public class Field {
-    private String field[] = null;
+    private String field[];
     private static final int MAX_DIM = 9;
 
     public Field(){
@@ -13,6 +15,7 @@ public class Field {
         return field;
     }
 
+    //For printing the field
     @Override
     public String toString() {
         String s = "";

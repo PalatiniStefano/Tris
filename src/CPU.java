@@ -5,6 +5,7 @@ public class CPU extends Player{
         super(s);
     }
 
+    //Method used for the action of the CPU. The CPU will place its symbol in one of the empty boxes
     public void actionPlayer(int pos, Field field) {
         int random = 0;
         random = (int)(Math.random()*9);
